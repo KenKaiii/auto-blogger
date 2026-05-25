@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Auto Blogger
 
-## Getting Started
+Auto Blogger is a Next.js and Payload CMS app for running a clean editorial blog today, with AI-assisted publishing workflows ready to grow into it.
 
-First, run the development server:
+It gives you the public blog, the admin CMS, rich text editing, SEO fields, media, categories, keywords, sources, prompt templates, and generation job models in one focused starter.
+
+## Why it is useful
+
+- Ship a real blog with Payload CMS and a polished Next.js frontend
+- Manage posts, drafts, categories, media, sources, keywords, and prompts from `/admin`
+- Keep editorial status separate from published draft status
+- Build toward automated content pipelines without rewriting the CMS later
+- Use Postgres, Payload, Lexical, SEO, search, forms, RSS, and sitemap foundations from day one
+
+## Stack
+
+- Next.js 16
+- React 19
+- Payload CMS 3
+- Postgres
+- Lexical rich text
+- MDX
+- Biome
+
+## Run it locally
+
+```bash
+npm install
+cp .env.example .env
+npm run dev
+```
+
+Open `http://localhost:3000` for the site and `http://localhost:3000/admin` for the CMS.
+
+You need `PAYLOAD_SECRET` and `DATABASE_URL` in `.env`. `OPENAI_API_KEY` and `REDIS_URL` are optional for future AI and background job work.
+
+## Scripts
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run lint
+npm run generate:types
+npm run generate:importmap
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Status
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is an early but practical base for an automated publishing product. The CMS and content model are in place. The generation worker pipeline is the next big piece.
