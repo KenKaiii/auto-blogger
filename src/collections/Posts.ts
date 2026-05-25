@@ -49,6 +49,7 @@ export const Posts: CollectionConfig = {
     {
       name: "status",
       type: "select",
+      enumName: "posts_editorial_status",
       required: true,
       defaultValue: "idea",
       options: [

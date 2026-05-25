@@ -1,21 +1,52 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: oklch(100% 0 0deg);
+  --foreground: oklch(14.5% 0 0deg);
+  --card: oklch(96.5% 0.005 265deg);
+  --muted: oklch(97% 0 0deg);
+  --muted-foreground: oklch(55.6% 0 0deg);
+  --accent: oklch(97% 0 0deg);
+  --border: oklch(92.2% 0 0deg);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: oklch(14.5% 0 0deg);
+    --foreground: oklch(98.5% 0 0deg);
+    --card: oklch(17% 0 0deg);
+    --muted: oklch(26.9% 0 0deg);
+    --muted-foreground: oklch(70.8% 0 0deg);
+    --accent: oklch(26.9% 0 0deg);
+    --border: oklch(26.9% 0 0deg);
+  }
+}
+
+@layer utilities {
+  .container {
+    width: 100%;
+    max-width: 86rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (width >= 48rem) {
+    .container {
+      padding-inline: 2rem;
+    }
   }
 }
 
