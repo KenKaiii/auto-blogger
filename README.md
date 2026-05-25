@@ -7,8 +7,6 @@
 
 ---
 
-# Auto Blogger
-
 Auto Blogger is a Next.js and Payload CMS app for running a clean editorial blog today, with AI-assisted publishing workflows ready to grow into it.
 
 It gives you the public blog, the admin CMS, rich text editing, SEO fields, media, categories, keywords, sources, prompt templates, and generation job models in one focused starter.
