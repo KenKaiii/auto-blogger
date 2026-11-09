@@ -11,6 +11,9 @@ Auto Blogger is a Next.js and Payload CMS app for running a clean editorial blog
 
 It gives you the public blog, the admin CMS, rich text editing, SEO fields, media, categories, keywords, sources, prompt templates, and generation job models in one focused starter.
 
+> [!TIP]
+> **Want to build your own apps with AI?** A free 7-day build challenge and 20+ step-by-step projects are in my free community: **[skool.com/raid](https://www.skool.com/raid)**
+
 ## Why it is useful
 
 - Ship a real blog with Payload CMS and a polished Next.js frontend
